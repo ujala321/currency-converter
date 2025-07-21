@@ -1,0 +1,13 @@
+str1 = "Life offers you so many doors, it is up to you which to open and which one to close"
+print("a) Length of string:", len(str1))
+print("b) 5th character:", str1[4])
+print("   Last character:", str1[-1])
+print("c) Characters from 5th to 12th:", str1[4:12])
+print("d) Substring:", str1[:31])
+print("e) Count of 'o':", str1.count('o'))
+print("   Count of 'which':", str1.count('which'))
+words = str1.split()
+print("f) Does the 3rd word start with 'y'? ->", words[2].startswith('y'))
+print("g) Uppercase string:\n", str1.upper())
+print("h) Contains digits?", any(char.isdigit() for char in str1))
+words[5] = words[5].upper()

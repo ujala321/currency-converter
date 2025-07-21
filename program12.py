@@ -1,0 +1,23 @@
+
+marks = (56, 78, 95, 45, 78, 34, 87, 67, 78, 91)
+print("1)", marks[3])  
+print("2)", marks)
+filtered_range = tuple(m for m in marks if 45 <= m <= 87)
+print("3)", filtered_range)
+print("4)", marks[-5:])
+new_marks = marks + (88, 74, 69, 99, 63)
+print("5)", new_marks)
+ascending = tuple(sorted(new_marks))
+descending = tuple(sorted(new_marks, reverse=True))
+print("6a) Ascending:", ascending)
+print("6b) Descending:", descending)
+unique_marks = tuple(sorted(set(new_marks)))
+print("7)", unique_marks)
+def analyze_marks(data):
+    avg = sum(data) / len(data)
+    return avg, max(data), min(data)
+
+average, maximum, minimum = analyze_marks(new_marks)
+print("8) Average:", average)
+print("   Maximum:", maximum)
+print("   Minimum:", minimum)
